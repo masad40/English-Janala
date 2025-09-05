@@ -62,24 +62,19 @@
             <h2 class="text-4xl text-center md:text-start md:text-5xl font-bold"><span
                     class="text-[#00BCFF]">English</span> is Easy!!</h2>
             <p class=" text-justify md:text-[22px] font-medium hind-font mt-3">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু
-                করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে <br> যাবে
+                করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে
                 অন্য একটি Level এ</p>
-            <div class="join mt-2 ">
-                <div>
-                    <label class="input validator join-item ">
-                        <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none"
-                                stroke="currentColor">
-                                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-                            </g>
-                        </svg>
-                        <input type="email" placeholder="mail@site.com" required />
-                    </label>
-                    <div class="validator-hint hidden">Enter valid email address</div>
-                </div>
-                <button class="btn btn-neutral join-item">Join</button>
+            <div class="join mt-4 ">
+                <!-- <form class=" flex flex-col justify-center items-center"> -->
+
+                <form>
+                    <input class="px-4 py-1 border-gray-500 rounded-lg" type="text" placeholder="Usename"><br>
+                    <input class="px-4 py-1 border-gray-500 mt-2 rounded-lg" type="password" placeholder="Password"><br>
+                    <button class="btn btn-primary mt-2 rounded-lg">Get Started</button>
+                
+                </form>
             </div>
+
         </div>
         <div class="image flex-1">
             <img src="./assets/hero-student.png" alt="">
@@ -91,7 +86,22 @@
             </span>Learn Vocabularies</h2>
         <div id="level-container" class="flex justify-center gap-5 mt-5 flex-wrap"></div>
     </section>
-    <section id="word-container" class="bg-gray-100 p-10 my-10 w-11/12 mx-auto grid grid-cols-3 gap-5">
+    <section class="flex justify-center py-10">
+        <div class="join">
+            <div>
+                <label class="input validator join-item">
+                    
+                    <input id="input-search" type="text" placeholder="Search Vocabularies" />
+                </label>
+            </div>
+            <button id="btn-search" class="btn btn-primary rounded-sm">Search</button>
+        </div>
+    </section>
+    <section id="spinner" class="flex justify-center items-center py-13 hidden">
+        <span class="loading loading-bars loading-xl"></span>
+    </section>
+
+    <section id="word-container" class="grid-cols-1 md: bg-gray-100 p-10 my-10 w-11/12 mx-auto grid md:grid-cols-3 gap-5">
         <div class="text-center col-span-full space-y-3  p-4 rounded-xl">
 
             <p class="hind-font text-[#79716B] text-lg">আপনি এখনো কোন Lesson Select করেননি</p>
@@ -100,18 +110,18 @@
     </section>
 
     <!-- Open the modal using ID.showModal() method -->
-    <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+    <button class="btn hidden" onclick="my_modal_5.showModal()">open modal</button>
     <dialog id="my_modal" class="modal modal-bottom sm:modal-middle ">
         <div class="modal-box ">
             <div id="details-container" class="space-y-5"></div>
-                
-                <div class="modal-action">
-                    <form method="dialog">
-                        <!-- if there is a button in form, it will close the modal -->
-                        <button class="btn">Complete Learning</button>
-                    </form>
-                </div>
-            
+
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Complete Learning</button>
+                </form>
+            </div>
+
         </div>
     </dialog>
 
