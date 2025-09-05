@@ -92,8 +92,28 @@
         <div id="level-container" class="flex justify-center gap-5 mt-5 flex-wrap"></div>
     </section>
     <section id="word-container" class="bg-gray-100 p-10 my-10 w-11/12 mx-auto grid grid-cols-3 gap-5">
-        
+        <div class="text-center col-span-full space-y-3  p-4 rounded-xl">
+
+            <p class="hind-font text-[#79716B] text-lg">আপনি এখনো কোন Lesson Select করেননি</p>
+            <h2 class="hind-font font-medium text-4xl">একটি Lesson Select করুন।</h2>
+        </div>
     </section>
+
+    <!-- Open the modal using ID.showModal() method -->
+    <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+    <dialog id="my_modal" class="modal modal-bottom sm:modal-middle ">
+        <div class="modal-box ">
+            <div id="details-container" class="space-y-5"></div>
+                
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn">Complete Learning</button>
+                    </form>
+                </div>
+            
+        </div>
+    </dialog>
 
     <script src="./script.js"></script>
 </body>
